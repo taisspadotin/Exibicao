@@ -5,4 +5,5 @@ import { combineReducers } from 'redux';
 export const Reducers = combineReducers({
   clickState: clickReducer,
   TableState: mostraTable
+  
 });

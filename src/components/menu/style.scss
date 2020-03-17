@@ -1,0 +1,13 @@
+.menu{
+	position:fixed;
+	width: 100%;
+	z-index: 9999;
+	top: 0;
+	a{
+		text-decoration:none;
+		color: #000;
+		&:hover{
+			color: #35bdb2;
+		}
+	}
+}
