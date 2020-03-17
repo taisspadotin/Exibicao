@@ -67,7 +67,30 @@ class Home extends Component{
 			this.props.showTable(true);
 		}
 	}
+	
+	cadastra = () =>{
+	const {nomeValue, userValue} = this.state;
+		if(nomeValue === ''){
+			this.refNome.current.focus();
+			alert('Preencha o nome');
+		}
+		else
+		{	
+			let enviar = { nome: nomeValue, user: userValue };
 
+			fetch('http://localhost:3001/cadastro', {
+				method: 'post',
+				body: JSON.stringify(enviar)
+			  }).then(function(response) {
+				console.log(response.json());
+			  });
+			  /*axios.post(`http://localhost:3001/cadastro`, (enviar))
+		.then(resp =>{
+			alert(resp.data.message);
+			document.location.reload();*/
+		}
+
+	}
   
   render() {
     const {
@@ -136,6 +159,9 @@ class Home extends Component{
 			<Form.Field align="center">
 				<Button onClick={() =>document.location.reload()}>
 				  Limpar
+				</Button>
+				<Button onClick={() => this.cadastra()}>
+				  Cadastrar no banco
 				</Button>
 				<Button onClick={() => this.exibe()}>
 				  Concluir

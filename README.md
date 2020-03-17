@@ -11,8 +11,5 @@ npm install -g sass npm install node-sass
 npm install react-router-dom
 
 ## Funcionamento do sistema
-O redux foi utilizado para salvar o state do objeto dados, que é um array que armazena o state de todos os dados inseridos, baseando-se em um sistema de CRUD.
-
-O sitema não tem integração com banco de dados, ele é apenas uma demonstração da utilização do Redux para React.
-
-Como o redux permite a utilização e manipulação de um state para qualquer tela da navegação ele foi utilizados para mostrar os dados.
+-Na primeira tela é onde pode ser realizado o cadastro, tem um botão concluir onde ele apenas salva os dados utilizando redux, esses dados podem ser visualizados na tela de busca.
+-Na primeira tela também possui o botão cadastrar no banco que permite o cadastro no banco de dados utilizando a API em node js, esse dados também são listados na tela de busca
